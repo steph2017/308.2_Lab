@@ -80,32 +80,31 @@ let j = 0;
 // From doing test printing, I learned that JS treats "\n" as 1 character, not 2. Thus they share only 1 position in the string. Similarly, if i want to test for the existence of an escape character I test the full expression, not "\" and "n" individually. 
 
 
-// for (const i in cv) {
-for (i in cv) {
+while (i < cv.length) {
     //Row Level printing
     //Print each character into a cell, skip commas.
-    while (cv[j] != "," && cv[j] != "\n") {
+    while (cv[j] != "," && cv[j] != "\n" && j < cv.length) {
         cell1 = cell1 + cv[j];
         j++;
     }
     j++;
-    while (cv[j] != "," && cv[j] != "\n") {
+    while (cv[j] != "," && cv[j] != "\n" && j < cv.length) {
         cell2 = cell2 + cv[j];
         j++;
     }
     j++;
-    while (cv[j] != "," && cv[j] != "\n") {
+    while (cv[j] != "," && cv[j] != "\n" && j < cv.length) {
         cell3 = cell3 + cv[j];
         j++;
     }
     j++;
-    while (cv[j] != "," && cv[j] != "\n") {
+    while (cv[j] != "," && cv[j] != "\n" && j < cv.length) {
         cell4 = cell4 + cv[j];
         j++;
     }
     console.log(cell1, cell2, cell3, cell4);
     j++;
     cell1 = cell2 = cell3 = cell4 = "";
+    i = j;
 }
-
 
