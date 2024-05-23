@@ -38,20 +38,20 @@
 
 // I've got the factor counter concept down pat - we will use it to next the next prime. This should use a while loop since the counting bounds are not known. will need to breakthe loop at some point.
 
-let n = 11;
-let factorCounter = 0;
-do {
-    n++;
-    factorCounter = 0;
-    for (i = 1; i <= n; i++) {
-        if (n % i == 0) {
-            factorCounter++;
-        }
-    }
-}
-while (factorCounter > 2)
+// let n = 29;
+// let factorCounter = 0;
+// do {
+//     n++;
+//     factorCounter = 0;
+//     for (i = 1; i <= n; i++) {
+//         if (n % i == 0) {
+//             factorCounter++;
+//         }
+//     }
+// }
+// while (factorCounter > 2)
 
-console.log(n);
+// console.log(n);
 
 //  Pt. 3 Feeling Loopy 
 
@@ -69,3 +69,31 @@ console.log(n);
 
 //  in absence of learning arrays i will assume I will represent the row as 4 variables and reuse these 4 variables for each row. So I would determine when I have reached the end of the row which is when it hits the "\n".
 
+// let cv = "Index,Mass (kg),Spring 1 (m),Spring 2 (m)\n1,0.00,0.050,0.050\n2,0.49,0.066,0.066\n3,0.98,0.087,0.080\n4,1.47,0.116,0.108\n5,1.96,0.142,0.138\n6,2.45,0.166,0.158\n7,2.94,0.193,0.174\n8,3.43,0.204,0.192\n9,3.92,0.226,0.205\n10,4.41,0.238,0.232";
+let cv = "re\nst,1234569";
+let cell1 = "";
+let cell2 = "";
+let cell3 = "";
+let cell4 = "";
+
+console.log(cv.length);
+console.log(cv[0]);
+console.log(cv[1]);
+// console.log(cv[2] == "\n");
+console.log(cv[2]);
+console.log(cv[3]);
+console.log(cv[4]);
+console.log(cv[5]);
+
+// //Row Level printing
+// // for (const i in cv) {
+// for (i = 0; i <= 8; i++) {
+//     //Print each character into a cell, skip commas.
+//     let j = i;
+//     while (cv[j] != ",") {
+//         cell1 = cell1 + cv[j];
+//         j++;
+//     }
+//     i = j;
+// }
+// console.log(cell1);
