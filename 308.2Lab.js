@@ -69,8 +69,8 @@
 
 //  in absence of learning arrays i will assume I will represent the row as 4 variables and reuse these 4 variables for each row. So I would determine when I have reached the end of the row which is when it hits the "\n".
 
-// let cv = "Index,Mass (kg),Spring 1 (m),Spring 2 (m)\n1,0.00,0.050,0.050\n2,0.49,0.066,0.066\n3,0.98,0.087,0.080\n4,1.47,0.116,0.108\n5,1.96,0.142,0.138\n6,2.45,0.166,0.158\n7,2.94,0.193,0.174\n8,3.43,0.204,0.192\n9,3.92,0.226,0.205\n10,4.41,0.238,0.232";
-let cv = "rest,123,456,789\n9,bl0,000,end";
+let cv = "Index,Mass (kg),Spring 1 (m),Spring 2 (m)\n1,0.00,0.050,0.050\n2,0.49,0.066,0.066\n3,0.98,0.087,0.080\n4,1.47,0.116,0.108\n5,1.96,0.142,0.138\n6,2.45,0.166,0.158\n7,2.94,0.193,0.174\n8,3.43,0.204,0.192\n9,3.92,0.226,0.205\n10,4.41,0.238,0.232";
+// let cv = "rest,123,456,789\n9,bl0,000,end"; my test cv
 let cell1 = "";
 let cell2 = "";
 let cell3 = "";
@@ -108,3 +108,6 @@ while (i < cv.length) {
     i = j;
 }
 
+// Conclusion - I hadn't understood the behavior of the constant variable when used in a for in loop such as "for (i in string)" .
+// I thought you could reset i by reassigning it a new number in such a case , but you cannot - the iterations are fixed to how many characters are in the string.
+// So I bullied this by doing a bunch of while loops, but in hindsight, I would have tried to conform to iteration where i could use the for-in loop. 
