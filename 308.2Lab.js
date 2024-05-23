@@ -70,30 +70,42 @@
 //  in absence of learning arrays i will assume I will represent the row as 4 variables and reuse these 4 variables for each row. So I would determine when I have reached the end of the row which is when it hits the "\n".
 
 // let cv = "Index,Mass (kg),Spring 1 (m),Spring 2 (m)\n1,0.00,0.050,0.050\n2,0.49,0.066,0.066\n3,0.98,0.087,0.080\n4,1.47,0.116,0.108\n5,1.96,0.142,0.138\n6,2.45,0.166,0.158\n7,2.94,0.193,0.174\n8,3.43,0.204,0.192\n9,3.92,0.226,0.205\n10,4.41,0.238,0.232";
-let cv = "re\nst,1234569";
+let cv = "rest,123,456,789\n9,bl0,000,end";
 let cell1 = "";
 let cell2 = "";
 let cell3 = "";
 let cell4 = "";
+let i = 0;
+let j = 0;
+// From doing test printing, I learned that JS treats "\n" as 1 character, not 2. Thus they share only 1 position in the string. Similarly, if i want to test for the existence of an escape character I test the full expression, not "\" and "n" individually. 
 
-console.log(cv.length);
-console.log(cv[0]);
-console.log(cv[1]);
-// console.log(cv[2] == "\n");
-console.log(cv[2]);
-console.log(cv[3]);
-console.log(cv[4]);
-console.log(cv[5]);
 
-// //Row Level printing
-// // for (const i in cv) {
-// for (i = 0; i <= 8; i++) {
-//     //Print each character into a cell, skip commas.
-//     let j = i;
-//     while (cv[j] != ",") {
-//         cell1 = cell1 + cv[j];
-//         j++;
-//     }
-//     i = j;
-// }
-// console.log(cell1);
+// for (const i in cv) {
+for (i in cv) {
+    //Row Level printing
+    //Print each character into a cell, skip commas.
+    while (cv[j] != "," && cv[j] != "\n") {
+        cell1 = cell1 + cv[j];
+        j++;
+    }
+    j++;
+    while (cv[j] != "," && cv[j] != "\n") {
+        cell2 = cell2 + cv[j];
+        j++;
+    }
+    j++;
+    while (cv[j] != "," && cv[j] != "\n") {
+        cell3 = cell3 + cv[j];
+        j++;
+    }
+    j++;
+    while (cv[j] != "," && cv[j] != "\n") {
+        cell4 = cell4 + cv[j];
+        j++;
+    }
+    console.log(cell1, cell2, cell3, cell4);
+    j++;
+    cell1 = cell2 = cell3 = cell4 = "";
+}
+
+
