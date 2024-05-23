@@ -38,20 +38,36 @@
 
 // I've got the factor counter concept down pat - we will use it to next the next prime. This should use a while loop since the counting bounds are not known. will need to breakthe loop at some point.
 
-let n = 5;
-let factorCounter = 0;
+// let n = 5;
+// let factorCounter = 0;
 
-do n++;
-while (n) {
-    for (i = 1; i <= n; i++) {
-        if (n % i == 0) {
-            factorCounter++;
-        }
-    }
-    if (factorCounter <= 2) {
-        console.log(n);
-        break;
-    }
+// do n++;
+// while (n) {
+//     for (i = 1; i <= n; i++) {
+//         if (n % i == 0) {
+//             factorCounter++;
+//         }
+//     }
+//     if (factorCounter <= 2) {
+//         console.log(n);
+//         break;
+//     }
 
-}
+// }
+
+//  Pt. 3 Feeling Loopy 
+
+// Your task is to write a script that accomplishes the following:
+// Loop through the characters of a given CSV string.
+// Store each “cell” of data in a variable.
+// When you encounter a comma, move to the next cell.
+// When you encounter the “\r\n” sequence, move to the next “row.”
+// Log each row of data.
+// You do not need to format the data, the following works well.
+// console.log(cell1, cell2, cell3, cell4);
+// You can make the following assumptions:
+// There will only be 4 cells per row.
+// There will be no escaped characters other than “\n”.
+
+//  in absence of learning arrays i will assume I will represent the row as 4 variables and reuse these 4 variables for each row. So I would determine when I have reached the end of the row which is when it hits the "\n".
 
