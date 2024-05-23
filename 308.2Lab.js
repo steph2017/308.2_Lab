@@ -38,22 +38,20 @@
 
 // I've got the factor counter concept down pat - we will use it to next the next prime. This should use a while loop since the counting bounds are not known. will need to breakthe loop at some point.
 
-// let n = 5;
-// let factorCounter = 0;
+let n = 11;
+let factorCounter = 0;
+do {
+    n++;
+    factorCounter = 0;
+    for (i = 1; i <= n; i++) {
+        if (n % i == 0) {
+            factorCounter++;
+        }
+    }
+}
+while (factorCounter > 2)
 
-// do n++;
-// while (n) {
-//     for (i = 1; i <= n; i++) {
-//         if (n % i == 0) {
-//             factorCounter++;
-//         }
-//     }
-//     if (factorCounter <= 2) {
-//         console.log(n);
-//         break;
-//     }
-
-// }
+console.log(n);
 
 //  Pt. 3 Feeling Loopy 
 
