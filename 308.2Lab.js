@@ -9,23 +9,23 @@
 
 // For a given number would want to log any potential "fizz" or "buzz" first and if applicable, break the iteration before logging the number. which means use continue.
 
-// for (i = 1; i <= 100; i++) {
-//     if (i % 3 != 0 && i % 5 != 0) {
-//         console.log(i);
-//     }
-//     else if (i % 3 == 0) {
-//         if (i % 5 == 0) {
-//             console.log("Fizz Buzz");
-//         }
-//         else {
-//             console.log("Fizz");
-//         }
-//     }
-//     else {
-//         console.log("Buzz");
-//     }
+for (i = 1; i <= 100; i++) {
+    if (i % 3 != 0 && i % 5 != 0) {
+        console.log(i);
+    }
+    else if (i % 3 == 0) {
+        if (i % 5 == 0) {
+            console.log("Fizz Buzz");
+        }
+        else {
+            console.log("Fizz");
+        }
+    }
+    else {
+        console.log("Buzz");
+    }
 
-// }
+}
 
 // Pt .2 Prime Time
 
@@ -38,20 +38,20 @@
 
 // I've got the factor counter concept down pat - we will use it to next the next prime. This should use a while loop since the counting bounds are not known. will need to breakthe loop at some point.
 
-// let n = 29;
-// let factorCounter = 0;
-// do {
-//     n++;
-//     factorCounter = 0;
-//     for (i = 1; i <= n; i++) {
-//         if (n % i == 0) {
-//             factorCounter++;
-//         }
-//     }
-// }
-// while (factorCounter > 2)
+let n = 29;
+let factorCounter = 0;
+do {
+    n++;
+    factorCounter = 0;
+    for (i = 1; i <= n; i++) {
+        if (n % i == 0) {
+            factorCounter++;
+        }
+    }
+}
+while (factorCounter > 2)
 
-// console.log(n);
+console.log(n);
 
 //  Pt. 3 Feeling Loopy 
 
